@@ -2,27 +2,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My Book Library</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>📚 Book Library</title>
+  <link href="style.css" rel="stylesheet"/>
 </head>
-<body>
-    <h1>📚 My Book Library</h1>
-    <form id="bookForm">
-        <input type="text" id="bookName" placeholder="Book Name" required>
-        <input type="text" id="author" placeholder="Author" required>
-        <input type="file" id="cover" accept="image/*" capture="environment">
-        <button type="submit">Add Book</button>
-    </form>
-    <hr>
-    <input type="text" id="searchBox" placeholder="Search by book or author">
-    <div id="stats"></div>
-    <div id="bookList" class="gridView"></div>
+<body class="light">
+  <header>
+    <h1>📚 Book Library</h1>
+    <div class="controls">
+      <button onclick="toggleTheme()">🌓</button>
+      <select id="viewMode" onchange="switchView(this.value)">
+        <option value="grid">Grid</option>
+        <option value="list">List</option>
+        <option value="stack">Stack</option>
+      </select>
+    </div>
+  </header>
 
-    <button onclick="exportToCSV()">📤 Export to CSV</button>
-    <button onclick="syncToGoogleSheet()">🔄 Sync to Google Sheets</button>
+  <form id="bookForm">
+    <input type="text" id="bookName" placeholder="Book Name" required>
+    <input type="text" id="author" placeholder="Author" required>
+    <input type="file" id="cover" accept="image/*" capture="environment">
+    <button type="submit">Add Book</button>
+  </form>
 
-    <script src="app.js"></script>
+  <input type="text" id="searchBox" placeholder="Search by book or author">
+
+  <div id="stats"></div>
+  <div id="bookList" class="gridView"></div>
+
+  <script src="app.js"></script>
 </body>
 </html>

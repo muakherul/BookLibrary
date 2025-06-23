@@ -1,28 +1,18 @@
 
 body {
-    font-family: sans-serif;
-    padding: 20px;
-    background-color: #f9f9f9;
+  font-family: sans-serif;
+  margin: 0; padding: 0;
+  background: var(--bg); color: var(--text);
 }
-form input, form button {
-    display: block;
-    margin: 10px 0;
-    padding: 8px;
-    width: 100%;
-    max-width: 300px;
-}
-#bookList {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-.bookCard {
-    border: 1px solid #ccc;
-    padding: 10px;
-    background: white;
-    width: 200px;
-}
-.bookCard img {
-    max-width: 100%;
-    height: auto;
-}
+body.light { --bg: #fff; --text: #111; }
+body.dark { --bg: #111; --text: #eee; }
+header { padding: 10px; display: flex; justify-content: space-between; align-items: center; }
+.controls button, .controls select { margin-left: 8px; }
+form, #searchBox, #stats { padding: 10px; display: flex; flex-wrap: wrap; gap: 10px; }
+form input, button, select { padding: 5px; }
+#bookList.gridView { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+#bookList.listView { display: flex; flex-direction: column; gap: 10px; }
+#bookList.stackView { display: flex; flex-direction: column-reverse; gap: 10px; }
+.bookCard { border: 1px solid #ccc; padding: 10px; background: var(--bg); box-shadow: 1px 1px 4px #aaa; }
+.bookCard img { max-width: 100%; height: auto; }
+.bookCard button { margin-top: 5px; }
