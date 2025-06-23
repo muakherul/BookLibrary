@@ -1,0 +1,28 @@
+
+body {
+    font-family: sans-serif;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+form input, form button {
+    display: block;
+    margin: 10px 0;
+    padding: 8px;
+    width: 100%;
+    max-width: 300px;
+}
+#bookList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.bookCard {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background: white;
+    width: 200px;
+}
+.bookCard img {
+    max-width: 100%;
+    height: auto;
+}
