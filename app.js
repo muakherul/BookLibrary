@@ -57,7 +57,7 @@ function exportToCSV() {
 }
 
 function syncToGoogleSheet() {
-    if (!SHEET_URL.includes('PASTE_YOUR_SCRIPT_URL_HERE')) {
+    if (!SHEET_URL.includes('https://script.google.com/macros/s/AKfycbxOhGeGPOBzpOkN1-ipgGHzy5h_km2M37xQygjoffVEweoMZI501RAwk6DX6TjTLIltTw/exec')) {
         books.forEach(book => {
             fetch(SHEET_URL, {
                 method: 'POST',
