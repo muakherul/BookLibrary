@@ -1,6 +1,6 @@
 
 let books = [];
-const SHEET_URL = 'https://script.google.com/macros/s/PASTE_YOUR_SCRIPT_URL_HERE/exec';
+const SHEET_URL = 'https://script.google.com/macros/s/AKfycbxOhGeGPOBzpOkN1-ipgGHzy5h_km2M37xQygjoffVEweoMZI501RAwk6DX6TjTLIltTw/exec';
 let currentCoverFile = null;
 let editingIndex = -1;
 
